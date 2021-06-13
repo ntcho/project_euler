@@ -23,6 +23,10 @@ a:hover {
     color: $high-emph !important;
 }
 
+.site-header, .site-footer, .social-media-list li a, .pagination li a {
+    border: 1px solid $dark-grey !important;
+}
+
 .site-nav {
     background-color: $dark-grey;
     border-color: $overlay-light;
