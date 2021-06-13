@@ -1,11 +1,17 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+# About
 
+This website is my archive of solutions for **[Project Euler](https://projecteuler.net/)**.
 
+You can find me on Project Euler by the username [ntcho](https://projecteuler.net/progress=ntcho). Add me with the friend key `1828846_mDXX1JoQ1hEkfcH39KbcQhDPZCEUn52X`!
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+Please feel free to leave comments on my solutions for better approach, or any questions.
+
+# Behind the scenes
+
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)**.
