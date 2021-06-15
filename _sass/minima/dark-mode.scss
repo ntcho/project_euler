@@ -42,6 +42,11 @@ pre, code {
     background-color: $overlay;
 }
 
+.flash > pre, code {
+    border-color: inherit;
+    background-color: transparent;
+}
+
 .page-description {
     color: $med-emph;
 }
