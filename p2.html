@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Problem 2 - Even Fibonacci numbers | project_euler</title>
+<title>Problem 2: Even Fibonacci numbers | project_euler</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Problem 2 - Even Fibonacci numbers" />
+<meta property="og:title" content="Problem 2: Even Fibonacci numbers" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Some good old Fibonacci, but only even numbers." />
 <meta property="og:description" content="Some good old Fibonacci, but only even numbers." />
-<link rel="canonical" href="https://ntcho.github.io/project_euler/solution/2021/06/10/p2.html" />
-<meta property="og:url" content="https://ntcho.github.io/project_euler/solution/2021/06/10/p2.html" />
+<link rel="canonical" href="https://ntcho.github.io/project_euler/p2" />
+<meta property="og:url" content="https://ntcho.github.io/project_euler/p2" />
 <meta property="og:site_name" content="project_euler" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"Some good old Fibonacci, but only even numbers.","url":"https://ntcho.github.io/project_euler/solution/2021/06/10/p2.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ntcho.github.io/project_euler/solution/2021/06/10/p2.html"},"headline":"Problem 2 - Even Fibonacci numbers","dateModified":"2021-06-10T00:00:00-05:00","datePublished":"2021-06-10T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"description":"Some good old Fibonacci, but only even numbers.","url":"https://ntcho.github.io/project_euler/p2","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ntcho.github.io/project_euler/p2"},"headline":"Problem 2: Even Fibonacci numbers","dateModified":"2021-06-10T00:00:00-05:00","datePublished":"2021-06-10T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/project_euler/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ntcho.github.io/project_euler/feed.xml" title="project_euler" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -102,7 +102,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Problem 2 - Even Fibonacci numbers</h1><p class="page-description">Some good old Fibonacci, but only even numbers.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-10T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Problem 2: Even Fibonacci numbers</h1><p class="page-description">Some good old Fibonacci, but only even numbers.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-10T00:00:00-05:00" itemprop="datePublished">
         Jun 10, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -147,16 +147,16 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Problem">Problem </a>
+<li class="toc-entry toc-h2"><a href="#🔒-Problem">🔒 Problem </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Key-Idea">Key Idea </a></li>
+<li class="toc-entry toc-h3"><a href="#🔐-Key-Idea">🔐 Key Idea </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Solution">Solution </a>
+<li class="toc-entry toc-h2"><a href="#🔑-Solution">🔑 Solution </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Initial-idea">Initial idea </a></li>
-<li class="toc-entry toc-h3"><a href="#Loop-method-(from-overview)">Loop method (from overview) </a></li>
-<li class="toc-entry toc-h3"><a href="#Every-third-number-method-(from-overview)">Every third number method (from overview) </a></li>
+<li class="toc-entry toc-h3"><a href="#🧭-Initial-idea">🧭 Initial idea </a></li>
+<li class="toc-entry toc-h3"><a href="#🔁-Loop-method-(from-overview)">🔁 Loop method (from overview) </a></li>
+<li class="toc-entry toc-h3"><a href="#🎯-Every-third-number-method-(from-overview)">🎯 Every third number method (from overview) </a></li>
 </ul>
 </li>
 </ul><!--
@@ -171,14 +171,14 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problem">
-<a class="anchor" href="#Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://projecteuler.net/problem=2">Problem</a><a class="anchor-link" href="#Problem"> </a>
+<h2 id="🔒-Problem">
+<a class="anchor" href="#%F0%9F%94%92-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://projecteuler.net/problem=2">🔒 Problem</a><a class="anchor-link" href="#%F0%9F%94%92-Problem"> </a>
 </h2>
 <p>Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with 1 and 2, the first 10 terms will be:</p>
 <p>1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...</p>
 <p>By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.</p>
-<h3 id="Key-Idea">
-<a class="anchor" href="#Key-Idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Idea<a class="anchor-link" href="#Key-Idea"> </a>
+<h3 id="🔐-Key-Idea">
+<a class="anchor" href="#%F0%9F%94%90-Key-Idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔐 Key Idea<a class="anchor-link" href="#%F0%9F%94%90-Key-Idea"> </a>
 </h3>
 <p>testing first few iterations for patterns (especially when thousands of iterations are estimated)</p>
 
@@ -188,13 +188,13 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Solution">
-<a class="anchor" href="#Solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solution<a class="anchor-link" href="#Solution"> </a>
+<h2 id="🔑-Solution">
+<a class="anchor" href="#%F0%9F%94%91-Solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔑 Solution<a class="anchor-link" href="#%F0%9F%94%91-Solution"> </a>
 </h2>
-<h3 id="Initial-idea">
-<a class="anchor" href="#Initial-idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial idea<a class="anchor-link" href="#Initial-idea"> </a>
+<h3 id="🧭-Initial-idea">
+<a class="anchor" href="#%F0%9F%A7%AD-Initial-idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>🧭 Initial idea<a class="anchor-link" href="#%F0%9F%A7%AD-Initial-idea"> </a>
 </h3>
-<p>O(n) complexity, using recursion.</p>
+<p>$O(n)$ complexity, using recursion.</p>
 <p><strong>NOTE</strong>: Use loops over recursions for performance.</p>
 
 </div>
@@ -248,10 +248,10 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Loop-method-(from-overview)">
-<a class="anchor" href="#Loop-method-(from-overview)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loop method (from overview)<a class="anchor-link" href="#Loop-method-(from-overview)"> </a>
+<h3 id="🔁-Loop-method-(from-overview)">
+<a class="anchor" href="#%F0%9F%94%81-Loop-method-(from-overview)" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔁 Loop method (from overview)<a class="anchor-link" href="#%F0%9F%94%81-Loop-method-(from-overview)"> </a>
 </h3>
-<p>O(n) complexity.</p>
+<p>$O(n)$ complexity.</p>
 
 </div>
 </div>
@@ -301,10 +301,10 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Every-third-number-method-(from-overview)">
-<a class="anchor" href="#Every-third-number-method-(from-overview)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Every third number method (from overview)<a class="anchor-link" href="#Every-third-number-method-(from-overview)"> </a>
+<h3 id="🎯-Every-third-number-method-(from-overview)">
+<a class="anchor" href="#%F0%9F%8E%AF-Every-third-number-method-(from-overview)" aria-hidden="true"><span class="octicon octicon-link"></span></a>🎯 Every third number method (from overview)<a class="anchor-link" href="#%F0%9F%8E%AF-Every-third-number-method-(from-overview)"> </a>
 </h3>
-<p>O(n) complexity, with 1/3 of the iteration compared to the loop method.</p>
+<p>$O(n)$ complexity, with 1/3 of the iteration compared to the loop method.</p>
 <p><strong>Key idea</strong>: testing first few iterations</p>
 <p>fibonacci sequence = 1 1 <u>2</u> 3 5 <u>8</u> 13 21 <u>34</u> 55 89 <u>144</u> ...</p>
 
@@ -366,7 +366,7 @@ window.onload = wrap_img;
         theme="github-dark"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/project_euler/solution/2021/06/10/p2.html" hidden></a>
+</script><a class="u-url" href="/project_euler/p2" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
