@@ -68,6 +68,9 @@ exclude:
 include:
   - _pages
 
+# This sets the title of the post as the published URL.
+permalink: /:title.html
+
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
