@@ -217,7 +217,11 @@ $dt-green-light: rgb(172, 229, 145);
     }
 }
 
-p code{
-  // font-size: 14px;
-  font-size: 100%;
+// p code{
+//   font-size: 14px;
+// }
+
+pre, code {
+  border: 1px solid rgba(216, 216, 216, 0.25);
+  border-radius: 2px;
 }
