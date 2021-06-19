@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Problem 28: Number spiral diagonals | project_euler</title>
+<title>Problem 4: Largest palindrome product | project_euler</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Problem 28: Number spiral diagonals" />
+<meta property="og:title" content="Problem 4: Largest palindrome product" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Spiral, diagonal and sum." />
-<meta property="og:description" content="Spiral, diagonal and sum." />
-<link rel="canonical" href="https://ntcho.github.io/project_euler/p28" />
-<meta property="og:url" content="https://ntcho.github.io/project_euler/p28" />
+<meta name="description" content="What is a palindromic number?" />
+<meta property="og:description" content="What is a palindromic number?" />
+<link rel="canonical" href="https://ntcho.github.io/project_euler/p4" />
+<meta property="og:url" content="https://ntcho.github.io/project_euler/p4" />
 <meta property="og:site_name" content="project_euler" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-06-15T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-06-16T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"Spiral, diagonal and sum.","url":"https://ntcho.github.io/project_euler/p28","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ntcho.github.io/project_euler/p28"},"headline":"Problem 28: Number spiral diagonals","dateModified":"2021-06-15T00:00:00-05:00","datePublished":"2021-06-15T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"description":"What is a palindromic number?","url":"https://ntcho.github.io/project_euler/p4","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ntcho.github.io/project_euler/p4"},"headline":"Problem 4: Largest palindrome product","dateModified":"2021-06-16T00:00:00-05:00","datePublished":"2021-06-16T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/project_euler/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ntcho.github.io/project_euler/feed.xml" title="project_euler" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -102,8 +102,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Problem 28: Number spiral diagonals</h1><p class="page-description">Spiral, diagonal and sum.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-15T00:00:00-05:00" itemprop="datePublished">
-        Jun 15, 2021
+    <h1 class="post-title p-name" itemprop="name headline">Problem 4: Largest palindrome product</h1><p class="page-description">What is a palindromic number?</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-16T00:00:00-05:00" itemprop="datePublished">
+        Jun 16, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -126,19 +126,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/ntcho/project_euler/tree/master/_notebooks/2021-06-15-p28.ipynb" role="button" target="_blank">
+    <a href="https://github.com/ntcho/project_euler/tree/master/_notebooks/2021-06-16-p4.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/project_euler/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/ntcho/project_euler/master?filepath=_notebooks%2F2021-06-15-p28.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/ntcho/project_euler/master?filepath=_notebooks%2F2021-06-16-p4.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/project_euler/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/ntcho/project_euler/blob/master/_notebooks/2021-06-15-p28.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/ntcho/project_euler/blob/master/_notebooks/2021-06-16-p4.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/project_euler/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -155,14 +155,18 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#🔑-Solution">🔑 Solution </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#🧭-Initial-idea">🧭 Initial idea </a></li>
-<li class="toc-entry toc-h3"><a href="#🚀-1-loop-method">🚀 1-loop method </a></li>
+<li class="toc-entry toc-h3"><a href="#🎲-Difference-of-80-method-(from-harveyramer-in-solution-thread)">🎲 Difference of 80 method (from harveyramer in solution thread) </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#🔐-Key-idea">🔐 Key idea </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-06-15-p28.ipynb
+# file to edit: _notebooks/2021-06-16-p4.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -171,20 +175,13 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="🔒-Problem">
-<a class="anchor" href="#%F0%9F%94%92-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔒 <a href="https://projecteuler.net/problem=28">Problem</a><a class="anchor-link" href="#%F0%9F%94%92-Problem"> </a>
+<a class="anchor" href="#%F0%9F%94%92-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔒 <a href="https://projecteuler.net/problem=4">Problem</a><a class="anchor-link" href="#%F0%9F%94%92-Problem"> </a>
 </h2>
-<p>Starting with the number 1 and moving to the right in a clockwise direction a 5 by 5 spiral is formed as follows:</p>
-<p class="monospace center"><span style="color: orange;"><b>21</b></span> 22 23 24 <span style="color: orange;"><b>25</b></span><br>
-20  <span style="color: orange;"><b> 7</b></span>   8  <span style="color: orange;"><b> 9</b></span> 10<br>
-19   6  <span style="color: orange;"><b> 1</b></span>   2 11<br>
-18  <span style="color: orange;"><b> 5</b></span>   4  <span style="color: orange;"><b> 3</b></span> 12<br><span style="color: orange;"><b>17</b></span> 16 15 14 <span style="color: orange;"><b>13</b></span></p>
-<p>It can be verified that the sum of the numbers on the diagonals is 101.</p>
-<p>What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?</p>
+<p>A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.</p>
+<p>Find the largest palindrome made from the product of two 3-digit numbers.</p>
 <h3 id="🔐-Key-Idea">
 <a class="anchor" href="#%F0%9F%94%90-Key-Idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔐 Key Idea<a class="anchor-link" href="#%F0%9F%94%90-Key-Idea"> </a>
 </h3>
-<p>finding the pattern for the series</p>
-
 </div>
 </div>
 </div>
@@ -197,8 +194,7 @@ window.onload = wrap_img;
 <h3 id="🧭-Initial-idea">
 <a class="anchor" href="#%F0%9F%A7%AD-Initial-idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>🧭 Initial idea<a class="anchor-link" href="#%F0%9F%A7%AD-Initial-idea"> </a>
 </h3>
-<p>$O(n)$ complexity.</p>
-<p>The variable <code>i</code> iterates from 1 indicating all elements in the spiral. Since every 1 element is skipped in the spiral of size 3, and 3 elements in size 5, and so on. So with <code>i += size - 1</code>, we skip the <code>i</code> up to the next diagonal element.</p>
+<p>$O(n^2)$ complexity, brute force method.</p>
 
 </div>
 </div>
@@ -210,19 +206,21 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">size</span> <span class="o">=</span> <span class="mi">3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">1001</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">999</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">999</span>
 
-<span class="k">while</span> <span class="n">size</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>  <span class="c1"># for 4 edge numbers in each square</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">i</span>
-    <span class="n">size</span> <span class="o">+=</span> <span class="mi">2</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">99</span><span class="p">:</span>
+    <span class="k">while</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">99</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">m</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>  <span class="c1"># check whether the string equals the reversed string</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">*</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">ans</span><span class="p">:</span>
+                <span class="n">ans</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">m</span>  <span class="c1"># find the maximum palindromic number</span>
+        <span class="n">m</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">999</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -235,7 +233,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>669171001
+<pre>906609
 </pre>
 </div>
 </div>
@@ -249,15 +247,30 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="🚀-1-loop-method">
-<a class="anchor" href="#%F0%9F%9A%80-1-loop-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>🚀 1-loop method<a class="anchor-link" href="#%F0%9F%9A%80-1-loop-method"> </a>
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>Would’ve been a cleaner code with <code>for i in range(100, 999): ...</code>.
+</div>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>Could’ve reduced the number of iteration to half by setting <code>m = n</code> at the end of <code>while</code> statement. It will skip doing redundant calculations such as <code>999 * 998</code> and <code>998 * 999</code>.
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="🎲-Difference-of-80-method-(from-harveyramer-in-solution-thread)">
+<a class="anchor" href="#%F0%9F%8E%B2-Difference-of-80-method-(from-harveyramer-in-solution-thread)" aria-hidden="true"><span class="octicon octicon-link"></span></a>🎲 Difference of 80 method (from <em>harveyramer</em> in solution thread)<a class="anchor-link" href="#%F0%9F%8E%B2-Difference-of-80-method-(from-harveyramer-in-solution-thread)"> </a>
 </h3>
-<p>$O(n)$ complexity.</p>
-<p>Since the numbers being added are in 4 edges of the $n$ by $n$ spiral, we can derive the following formula to calculate the sum of diagonal elements from the size $n$. We can find that the right top diagonal is $n^2$, and the other elements are $n^2 - (n - 1)$, $n^2 - 2(n - 1)$, $n^2 - 3(n - 1)$.</p>
-<p>$ S(n) = (n^2) + (n^2 - (n - 1)) + (n^2 - 2(n - 1)) + (n^2 - 3(n - 1)) $</p>
-<p>Which can be expanded to the following.</p>
-<p>$ S(n) = 4 n^2 - 6 n + 6 $</p>
-<p>Noting this formula works for $ n &gt; 1 $, we can easily convert this into a code.</p>
+<p>User <em>harveyramer</em> discovered the pattern that the two factor that makes the largest palindrome doesn't differ more than 80 numbers in the range.</p>
+<h4 id="🔐-Key-idea">
+<a class="anchor" href="#%F0%9F%94%90-Key-idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>🔐 Key idea<a class="anchor-link" href="#%F0%9F%94%90-Key-idea"> </a>
+</h4>
+<p>finding the pattern of the answer and reducing useless iterations</p>
 
 </div>
 </div>
@@ -269,13 +282,18 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">1001</span>  <span class="c1"># size limit</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">last</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">k</span> <span class="o">//</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># 80 + 1 when k = 1000</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="nb">sum</span> <span class="o">+=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="n">last</span><span class="p">,</span> <span class="n">k</span><span class="p">)):</span>  <span class="c1"># 999, 998, 997, ...</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">last</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>  <span class="c1"># i, i - 1, ... i - 80</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">:</span>
+                <span class="nb">max</span> <span class="o">=</span> <span class="n">n</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -288,7 +306,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>669171001
+<pre>906609
 </pre>
 </div>
 </div>
@@ -311,7 +329,7 @@ window.onload = wrap_img;
         theme="github-dark"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/project_euler/p28" hidden></a>
+</script><a class="u-url" href="/project_euler/p4" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
